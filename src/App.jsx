@@ -10,7 +10,7 @@ import VantaBg from './components/VantaBg'
 const App = () => {
   return (
     <>
-      <BrowserRouter>
+      <BrowserRouter basename='/my-portfolio'>
         <VantaBg>
           <Routes>
             <Route path='/' element={<Home />} />
