@@ -3,6 +3,7 @@ import Medias from './Medias'
 import AOS from 'aos'
 import 'aos/dist/aos.css';
 import { motion } from "framer-motion"
+import { Link } from 'react-router-dom';
 
 const IntroSection = () => {
     useEffect(() => {
@@ -29,13 +30,12 @@ const IntroSection = () => {
                 <motion.button
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}>
-                    <a href='/about' className='text-[1rem] font-[outfit] bg-transparent p-3 shadow-blue-900 shadow-sm rounded-[10px_100px/120px_100px] hover:shadow-none hover:bg-blue-900 text-[var(--light-color)] hover:transition-all hover:translate-y-1 ease-in-out'>
+                    <Link to='/about' className='text-[1rem] font-[outfit] bg-transparent p-3 shadow-blue-900 shadow-sm rounded-[10px_100px/120px_100px] hover:shadow-none hover:bg-blue-900 text-[var(--light-color)] hover:transition-all hover:translate-y-1 ease-in-out'>
                         Know More
 
-                    </a>
+                    </Link>
 
                 </motion.button>
-
 
                 {/* social-medias */}
                 <Medias />

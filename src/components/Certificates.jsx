@@ -73,7 +73,7 @@ const Certificates = () => {
             >
                 {images.map((image,index) => (
                     <SwiperSlide key={image.id}>
-                        <div className="flex flex-col items-center justify-center p-4">
+                        <div className="flex flex-col items-center justify-center md:p-4">
                             <img
                                 src={image.src}
                                 alt={image.title}

@@ -58,7 +58,7 @@ const PolarAreaChart = () => {
           color: '#ffffff44',
         },
         angleLines: {
-          color: '#ffffff44', 
+          color: '#ffffff44',
         },
         ticks: {
           display: false,
@@ -76,9 +76,15 @@ const PolarAreaChart = () => {
   };
 
   return (
-    <section className='max-w-4xl mx-auto my-10 p-5 rounded-lg' style={{ height: '600px' }}>
-      <PolarArea data={data} options={options} />
+    <section
+      className="w-full max-w-4xl md:mx-auto xs:my-3 md:my-10 md:p-5 rounded-lg"
+      style={{ height: 'auto' }}
+    >
+      <div className="relative w-full h-[300px] sm:h-[400px] md:h-[600px]">
+        <PolarArea data={data} options={options} />
+      </div>
     </section>
+
   );
 };
 
