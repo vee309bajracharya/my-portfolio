@@ -22,7 +22,7 @@
   /* Boska */
   @font-face {
     font-family: "Boska";
-    src: url("/my-portfolio/fonts/Boska/Boska-Bold.otf") format("opentype");
+    src: url("/fonts/Boska/Boska-Bold.otf") format("opentype");
     font-weight: 700;
     font-style: italic;
   }
@@ -30,7 +30,7 @@
   /* Fibonacci */
   @font-face {
     font-family: "Fibonacci";
-    src: url("/my-portfolio/fonts/Fibonacci/fibonacci-italic.ttf")
+    src: url("/fonts/Fibonacci/fibonacci-italic.ttf")
       format("truetype");
     font-weight: 700;
     font-style: italic;
@@ -39,7 +39,7 @@
   /* Smashe */
   @font-face {
     font-family: "Smashe";
-    src: url("/my-portfolio/fonts/Smashe/smashe-bold.otf") format("opentype");
+    src: url("/fonts/Smashe/smashe-bold.otf") format("opentype");
     font-weight: 900;
     font-style: normal;
   }
@@ -47,13 +47,13 @@
   /* Outfit */
   @font-face {
     font-family: "Outfit";
-    src: url("/my-portfolio/fonts/Outfit/Outfit-Light.ttf") format("truetype");
+    src: url("/fonts/Outfit/Outfit-Light.ttf") format("truetype");
     font-weight: 300;
     font-style: normal;
   }
   @font-face {
     font-family: "Outfit";
-    src: url("/my-portfolio/fonts/Outfit/Outfit-Bold.ttf") format("truetype");
+    src: url("/fonts/Outfit/Outfit-Bold.ttf") format("truetype");
     font-weight: 900;
     font-style: normal;
   }
