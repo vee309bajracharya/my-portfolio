@@ -9,6 +9,8 @@ import { useFormik } from 'formik';
 import { YupValidation } from '../components/YupValidation';
 import { toast } from 'react-toastify';
 import axios from 'axios';
+import PulseLoader from '../components/PulseLoader'
+import { Helmet } from 'react-helmet'
 
 
 const initialValues = {
@@ -28,35 +30,35 @@ const Contact = () => {
         handleSubmit,
         handleReset,
         handleChange,
-        touched 
-        } = useFormik({
-            initialValues: initialValues,
-            validationSchema: YupValidation,
-            onSubmit: async(values, {resetForm})=>{
-                try{
-                    const response = await axios.post(formEndPoint,values);
+        touched
+    } = useFormik({
+        initialValues: initialValues,
+        validationSchema: YupValidation,
+        onSubmit: async (values, { resetForm }) => {
+            try {
+                const response = await axios.post(formEndPoint, values);
 
-                    if(response.status === 200){
-                        toast.success("Message sent successfully!",{
-                            position: "top-center",
-                            autoClose: 3000,
-                        });
-                        resetForm();
-                    }else{
-                        toast.error("Failed to send message. Please try again.",{
-                            position: "top-center",
-                            autoClose: 3000,
-                        });
-                    }
-                }catch(error){
-                    toast.error("Error. Please try again later.",{
+                if (response.status === 200) {
+                    toast.success("Message sent successfully!", {
                         position: "top-center",
                         autoClose: 3000,
                     });
-                    console.log(error);
+                    resetForm();
+                } else {
+                    toast.error("Failed to send message. Please try again.", {
+                        position: "top-center",
+                        autoClose: 3000,
+                    });
                 }
+            } catch (error) {
+                toast.error("Error. Please try again later.", {
+                    position: "top-center",
+                    autoClose: 3000,
+                });
+                console.log(error);
             }
-        });
+        }
+    });
 
     useEffect(() => {
         AOS.init();
@@ -65,6 +67,19 @@ const Contact = () => {
 
     return (
         <section>
+            <Helmet>
+                <title>Contact | Veerin Bajracharya</title>
+
+                <meta property="og:title" content='Contact | Veerin Bajracharya' />
+                <meta property="og:url" content='https://my-portfolio-pi-two-17.vercel.app/contact' />
+                <meta property="og:image" content="https://my-portfolio-pi-two-17.vercel.app/for-medias.png" />
+                <meta property="og:type" content="website" />
+
+                <meta name="twitter:title" content="Contact | Veerin Bajracharya" />
+                <meta name="twitter:url" content="https://my-portfolio-pi-two-17.vercel.app/contact" />
+                <meta name="twitter:image" content="https://my-portfolio-pi-two-17.vercel.app/for-medias.png" />
+                <meta name="twitter:card" content="summary_large_image" />
+            </Helmet>
             <Navbar />
 
             <section className='xs:px-5 md:px-12 md:max-w-screen-xl md:py-8 md:my-5 md:mx-auto'>

@@ -9,6 +9,8 @@ import Project6 from '../assets/medias/projects/thinkverse.jpg'
 import { AnimatePresence, motion } from 'framer-motion'
 import AOS from 'aos'
 import 'aos/dist/aos.css';
+import PulseLoader from '../components/PulseLoader'
+import { Helmet } from 'react-helmet'
 
 const Projects = () => {
      useEffect(() => {
@@ -94,6 +96,20 @@ const Projects = () => {
      return (
 
           <section>
+               <Helmet>
+                    <title>Projects | Veerin Bajracharya</title>
+
+                    <meta property="og:title" content='Projects | Veerin Bajracharya' />
+                    <meta property="og:url" content='https://my-portfolio-pi-two-17.vercel.app/projects' />
+                    <meta property="og:image" content="https://my-portfolio-pi-two-17.vercel.app/for-medias.png" />
+                    <meta property="og:type" content="website" />
+
+                    <meta name="twitter:title" content="Projects | Veerin Bajracharya" />
+                    <meta name="twitter:url" content="https://my-portfolio-pi-two-17.vercel.app/projects" />
+                    <meta name="twitter:image" content="https://my-portfolio-pi-two-17.vercel.app/for-medias.png" />
+                    <meta name="twitter:card" content="summary_large_image" />
+
+               </Helmet>
                <Navbar />
 
                <section className='xs:px-5 md:px-12 md:max-w-screen-xl md:py-8 md:my-5 md:mx-auto' data-aos="zoom-in" data-aos-duration="4000">

@@ -6,6 +6,8 @@ import { motion } from "framer-motion"
 import { Link } from 'react-router-dom'
 import AOS from 'aos'
 import 'aos/dist/aos.css';
+import PulseLoader from '../components/PulseLoader'
+import { Helmet } from 'react-helmet'
 
 const About = () => {
   useEffect(() => {
@@ -14,6 +16,22 @@ const About = () => {
 
   return (
     <section>
+      <Helmet>
+        <title>About | Veerin Bajracharya</title>
+        
+        <meta property="og:title" content='About | Veerin Bajracharya' />
+        <meta property="og:url" content='https://my-portfolio-pi-two-17.vercel.app/about' />
+        <meta property="og:image" content="https://my-portfolio-pi-two-17.vercel.app/for-medias.png" />
+        <meta property="og:type" content="website" />
+
+        <meta name="twitter:title" content="About | Veerin Bajracharya" />
+        <meta name="twitter:url" content="https://my-portfolio-pi-two-17.vercel.app/about" />
+        <meta name="twitter:image" content="https://my-portfolio-pi-two-17.vercel.app/for-medias.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+
+
+      </Helmet>
+
       <Navbar />
 
       {/* about section starts */}
@@ -65,8 +83,8 @@ const About = () => {
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}>
-            <Link 
-              to='/projects' 
+            <Link
+              to='/projects'
               className='xs:text-xs md:text-[1rem] font-[outfit] bg-transparent p-3 shadow-blue-900 shadow-sm rounded-[10px_100px/120px_100px] hover:shadow-none hover:bg-blue-900 text-[var(--light-color)] hover:transition-all hover:translate-y-1 ease-in-out'
               onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               Continue to Projects
