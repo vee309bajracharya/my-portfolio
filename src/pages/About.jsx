@@ -27,13 +27,13 @@ const About = () => {
           <li className="mb-10 ml-4">
             <div className="absolute w-3 h-3 bg-gray-950 border-3 rounded-full -left-1.5"></div>
             <h2 className="xs:text-xl md:text-3xl font-bold mb-5 font-[outfit]">Bio</h2>
-            <p className="xs:text-xs md:text-lg font-normal tracking-wide leading-6">Hey! Myself Veerin Bajracharya, a curious front-end web developer currently pursuing my Bachelors degree in Computer Application. I enjoy turning ideas into clean, beautiful and responsive websites. I love experimenting with front-end stuffs like TailwindCSS, ReactJS and exploring various front-end libraries to include something new on projects. I may be a beginner, but I'm constantly working, learning and pushing myself toward becoming a skilled developer as well as teacher. I do enjoy teaching others as well, with what I have learnt. I began my teaching process with giving tuitions and teaching my juniors in college too.</p>
+            <p className="xs:text-sm md:text-lg font-normal tracking-wide leading-6">Hey! Myself Veerin Bajracharya, a curious front-end web developer currently pursuing my Bachelors degree in Computer Application. I enjoy turning ideas into clean, beautiful and responsive websites. I love experimenting with front-end stuffs like TailwindCSS, ReactJS and exploring various front-end libraries to include something new on projects. I may be a beginner, but I'm constantly working, learning and pushing myself toward becoming a skilled developer as well as teacher. I do enjoy teaching others as well, with what I have learnt. I began my teaching process with giving tuitions and teaching my juniors in college too.</p>
           </li>
 
           <li className="mb-20 ml-4">
             <div className="absolute w-3 h-3 bg-gray-950 border-3 rounded-full -left-1.5"></div>
             <h2 className="xs:text-xl md:text-3xl font-bold mb-5 font-[outfit]">Personal Interests & Fun Facts</h2>
-            <p className="xs:text-xs md:text-lg font-normal tracking-wide leading-6">As for personal interests, I love trying things out on
+            <p className="xs:text-sm md:text-lg font-normal tracking-wide leading-6">As for personal interests, I love trying things out on
               <span className='font-bold text-blue-400'><a href="https://codepen.io/veerinbajra/"> CodePen</a></span>, taking some of the front-end challenges on the
               <span className='font-bold text-blue-400'><a href="https://www.frontendmentor.io/profile/vee309bajracharya"> Front-end Mentor </a></span>
               to exercise my front-end skills + taking courses on the

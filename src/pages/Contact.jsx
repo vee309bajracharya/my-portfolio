@@ -212,10 +212,7 @@ const Contact = () => {
                     {/* content right */}
                     <section
                         className='xs:hidden lg:inline-flex lg:h-full'
-                        data-aos="fade-left"
-                        data-aos-anchor="#example-anchor"
-                        data-aos-offset="500"
-                        data-aos-duration="500">
+                        data-aos="fade-right">
                         <img src={ContactMsg} alt="Contact Image" className='w-full h-[25rem]' />
                     </section>
 
