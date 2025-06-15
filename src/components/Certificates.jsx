@@ -21,13 +21,13 @@ const Certificates = () => {
         {
             id: 1,
             src: Certificate1,
-            title: 'Public Speaking Competition',
+            title: 'Second Position in the Intra Public Speaking Competition',
 
         },
         {
             id: 2,
             src: Certificate2,
-            title: 'Basic Computer Course',
+            title: 'Basic Computer Courses',
 
         },
         {
@@ -80,7 +80,7 @@ const Certificates = () => {
                                 loading='lazy'
                                 className="w-full lg:max-w-2xl md:max-w-[60%] h-auto object-contain rounded-lg shadow-lg border-[var(--light-color)] border-1 text-center" />
                             <h3
-                                className={`mt-7 md:text-2xl font-medium font-[outfit] text-[var(--light-color)] transition-opacity duration-500 ease-in-out ${index === activeIndex ? 'opacity-100' : 'opacity-0'}`}
+                                className={`mt-7 text-center md:text-2xl font-medium font-[outfit] text-[var(--light-color)] transition-opacity duration-500 ease-in-out ${index === activeIndex ? 'opacity-100' : 'opacity-0'}`}
                             >
                                 {image.title}
                             </h3>

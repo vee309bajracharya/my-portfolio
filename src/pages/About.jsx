@@ -22,7 +22,7 @@ const About = () => {
         <h1 className="my-5 font-[fibonacci] font-extrabold xs:text-3xl md:text-5xl">About</h1>
 
         {/* about */}
-        <ul className="relative border-l-1 border-gray-300 ml-4 mt-12" data-aos="fade-down" data-aos-duration="4000">
+        <ul className="relative border-l-1 border-gray-300 mt-12" data-aos="fade-down" data-aos-duration="4000">
 
           <li className="mb-10 ml-4">
             <div className="absolute w-3 h-3 bg-gray-950 border-3 rounded-full -left-1.5"></div>
@@ -65,7 +65,10 @@ const About = () => {
           <motion.button
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}>
-            <Link to='/projects' className='text-[1rem] font-[outfit] bg-transparent p-3 shadow-blue-900 shadow-sm rounded-[10px_100px/120px_100px] hover:shadow-none hover:bg-blue-900 text-[var(--light-color)] hover:transition-all hover:translate-y-1 ease-in-out'>
+            <Link 
+              to='/projects' 
+              className='xs:text-xs md:text-[1rem] font-[outfit] bg-transparent p-3 shadow-blue-900 shadow-sm rounded-[10px_100px/120px_100px] hover:shadow-none hover:bg-blue-900 text-[var(--light-color)] hover:transition-all hover:translate-y-1 ease-in-out'
+              onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               Continue to Projects
 
             </Link>

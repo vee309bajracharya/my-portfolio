@@ -5,18 +5,24 @@ import Projects from './pages/Projects'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import VantaBg from './components/VantaBg'
+import PageNotFound from './pages/PageNotFound'
+import ScrollToTop from './components/ScrollToTop'
 
 
 const App = () => {
   return (
     <>
       <BrowserRouter>
+        <ScrollToTop />
         <VantaBg>
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/about' element={<About />} />
             <Route path='/projects' element={<Projects />} />
             <Route path='/contact' element={<Contact />} />
+
+            {/* unknown route */}
+            <Route path='*' element={<PageNotFound />} />
           </Routes>
 
 
