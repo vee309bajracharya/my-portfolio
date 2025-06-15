@@ -7,6 +7,8 @@ import Contact from './pages/Contact'
 import VantaBg from './components/VantaBg'
 import PageNotFound from './pages/PageNotFound'
 import ScrollToTop from './components/ScrollToTop'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 
 const App = () => {
@@ -20,11 +22,10 @@ const App = () => {
             <Route path='/about' element={<About />} />
             <Route path='/projects' element={<Projects />} />
             <Route path='/contact' element={<Contact />} />
-
             {/* unknown route */}
             <Route path='*' element={<PageNotFound />} />
           </Routes>
-
+          <ToastContainer/>
 
         </VantaBg>
       </BrowserRouter>

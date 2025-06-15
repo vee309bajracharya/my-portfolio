@@ -1,15 +1,68 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '../components/Navbar';
 import { motion } from "framer-motion";
 import ContactMsg from '../assets/svg/message.svg';
 import Medias from '../components/Medias';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { useFormik } from 'formik';
+import { YupValidation } from '../components/YupValidation';
+import { toast } from 'react-toastify';
+import axios from 'axios';
+
+
+const initialValues = {
+    name: '',
+    email: '',
+    message: '',
+};
+
+const formEndPoint = import.meta.env.VITE_FORMSPREE_URL;
 
 const Contact = () => {
+
+    const {
+        values,
+        errors,
+        handleBlur,
+        handleSubmit,
+        handleReset,
+        handleChange,
+        touched 
+        } = useFormik({
+            initialValues: initialValues,
+            validationSchema: YupValidation,
+            onSubmit: async(values, {resetForm})=>{
+                try{
+                    const response = await axios.post(formEndPoint,values);
+
+                    if(response.status === 200){
+                        toast.success("Message sent successfully!",{
+                            position: "top-center",
+                            autoClose: 3000,
+                        });
+                        resetForm();
+                    }else{
+                        toast.error("Failed to send message. Please try again.",{
+                            position: "top-center",
+                            autoClose: 3000,
+                        });
+                    }
+                }catch(error){
+                    toast.error("Error. Please try again later.",{
+                        position: "top-center",
+                        autoClose: 3000,
+                    });
+                    console.log(error);
+                }
+            }
+        });
+
     useEffect(() => {
         AOS.init();
-      }, []);
+    }, []);
+
+
     return (
         <section>
             <Navbar />
@@ -21,7 +74,7 @@ const Contact = () => {
                     data-aos-offset="500"
                 >
                     <h1 className='font-[fibonacci] xs:text-3xl md:text-5xl mt-4'>Contact</h1>
-                    <p className='font-normal xs:text-[1rem] md:text-xl my-5'>Email Me
+                    <p className='font-normal xs:text-[1rem] md:text-xl my-5'>Get in Touch or mail me on
                         <span className='pl-2 font-bold'>
                             <a href="mailto:veerinbajracharya08@gmail.com">veerinbajracharya08@gmail.com</a>
                         </span>
@@ -38,7 +91,8 @@ const Contact = () => {
                         <form
                             action=""
                             method="POST"
-                            className='flex flex-col gap-6'>
+                            className='flex flex-col gap-6'
+                            onSubmit={handleSubmit}>
 
                             {/* name field */}
                             <div className="relative">
@@ -49,7 +103,14 @@ const Contact = () => {
                                     className='peer w-full px-3 pt-6 pb-2 text-[1rem] border border-gray-300 rounded-md bg-transparent focus:outline-none focus:border-blue-700'
                                     placeholder=''
                                     autoComplete='off'
+                                    value={values.name}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    onReset={handleReset}
                                 />
+                                {errors.name && touched.name ? (
+                                    <p className='text-red-500 text-sm mt-1 font-medium'>{errors.name}</p>
+                                ) : null}
                                 <label
                                     htmlFor="name"
                                     className='absolute left-3 top-1 text-gray-500 text-md transition-all
@@ -75,9 +136,16 @@ const Contact = () => {
                                     className='peer w-full px-3 pt-6 pb-2 text-[1rem] border border-gray-300 rounded-md bg-transparent focus:outline-none focus:border-blue-700'
                                     placeholder=''
                                     autoComplete='off'
+                                    value={values.email}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}
+                                    onReset={handleReset}
                                 />
+                                {errors.email && touched.email ? (
+                                    <p className='text-red-500 text-sm mt-1 font-medium'>{errors.email}</p>
+                                ) : null}
                                 <label
-                                    htmlFor="name"
+                                    htmlFor="email"
                                     className='absolute left-3 top-1 text-gray-500 text-md transition-all
                                             duration-200 transform -translate-y-2 scale-75 peer-placeholder-shown:top-4 peer-placeholder-shown:text-base
                                             peer-placeholder-shown:text-gray-40peer-focus:top-5
@@ -99,9 +167,15 @@ const Contact = () => {
                                     name="message"
                                     id="message"
                                     required
-                                    className='peer w-full px-3 pt-6 pb-2 text-[1rem] border border-gray-300 rounded-md bg-transparent focus:outline-none focus:border-blue-700'>
-
+                                    className='peer w-full px-3 pt-6 pb-2 text-[1rem] border border-gray-300 rounded-md bg-transparent focus:outline-none focus:border-blue-700 resize-none overflow-hidden h-32'
+                                    autoComplete="off"
+                                    value={values.message}
+                                    onChange={handleChange}
+                                    onBlur={handleBlur}>
                                 </textarea>
+                                {errors.message && touched.message ? (
+                                    <p className='text-red-500 text-sm mt-1 font-medium'>{errors.message}</p>
+                                ) : null}
                                 <label
                                     htmlFor="message"
                                     className='absolute left-3 top-1 pt-5 pb-2 text-gray-500 text-md transition-all
