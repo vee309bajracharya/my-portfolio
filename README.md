@@ -20,4 +20,4 @@ This portfolio is more than just a demonstration of my work – It's a demonstra
 
 
 ## Portfolio Live 🚀
-[![Website](https://img.shields.io/badge/Website-Live-brightgreen?style=for-the-badge&logo=githubpages&logoColor=white)](https://my-portfolio-pi-two-17.vercel.app/)
+[![Website](https://img.shields.io/badge/Website-Live-brightgreen?style=for-the-badge&logo=githubpages&logoColor=white)](https://veerin-bajracharya.vercel.app/)
