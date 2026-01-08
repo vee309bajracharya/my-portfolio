@@ -19,7 +19,7 @@ const PolarAreaChart = () => {
     datasets: [
       {
         label: 'Confidence (%)',
-        data: [90, 85, 60, 75, 80, 65, 60, 55, 50, 60, 50],
+        data: [90, 85, 60, 30, 90, 80, 40, 70, 65, 60, 50],
         backgroundColor: [
           'rgba(240, 104, 48, 0.7)',
           'rgba(21, 114, 182, 0.7)',

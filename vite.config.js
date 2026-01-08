@@ -14,8 +14,6 @@ export default defineConfig({
         name: 'Veerin Bajracharya Portfolio',
         short_name: 'Veerin Portfolio',
         description: 'An official Portfolio of Veerin Bajracharya, a front-end web developer.',
-        theme_color: '#0f172a',
-        background_color: '#fffff0',
         display: 'standalone',
         scope: '/',
         icons:[

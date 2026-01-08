@@ -24,8 +24,8 @@ const IntroSection = () => {
                     <span className="outlined-text">Bajracharya</span>
                 </h1>
 
-                <p className='font-[outfit] text-left xs:leading-8 md:leading-10 my-7 xs:text-[1rem] md:text-xl font-extralight'>I'm currently pursuing my BCA degree at Nagarjuna College of IT. What really excites me is creating pleasant websites and designs as a front end web developer. <br />
-                    I'm all in, when it comes to learning front end tools to create an easy-to-use website. Apart from coding. I also have a desire to impart computer science education as a teacher.</p>
+                <p className='font-[outfit] text-left xs:leading-8 md:leading-10 my-7 xs:text-[1rem] md:text-xl font-extralight'>A BCA student of Nagarjuna College of IT. What really excites me is creating pleasant websites and web-applications as a web developer.
+                    I'm all in, when it comes to learn something new in web-related fields to create an easy-to-use website and applications. Apart from coding. I also have a desire to impart computer science education as a teacher.</p>
 
                 <motion.button
                     whileHover={{ scale: 1.02 }}

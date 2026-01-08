@@ -71,13 +71,13 @@ const Contact = () => {
                 <title>Contact | Veerin Bajracharya</title>
 
                 <meta property="og:title" content='Contact | Veerin Bajracharya' />
-                <meta property="og:url" content='https://my-portfolio-pi-two-17.vercel.app/contact' />
-                <meta property="og:image" content="https://my-portfolio-pi-two-17.vercel.app/for-medias.png" />
+                <meta property="og:url" content='https://veerin-bajracharya.vercel.app/contact' />
+                <meta property="og:image" content="https://veerin-bajracharya.vercel.app/for-medias.png" />
                 <meta property="og:type" content="website" />
 
                 <meta name="twitter:title" content="Contact | Veerin Bajracharya" />
-                <meta name="twitter:url" content="https://my-portfolio-pi-two-17.vercel.app/contact" />
-                <meta name="twitter:image" content="https://my-portfolio-pi-two-17.vercel.app/for-medias.png" />
+                <meta name="twitter:url" content="https://veerin-bajracharya.vercel.app/contact" />
+                <meta name="twitter:image" content="https://veerin-bajracharya.vercel.app/for-medias.png" />
                 <meta name="twitter:card" content="summary_large_image" />
             </Helmet>
             <Navbar />

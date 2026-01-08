@@ -6,6 +6,7 @@ import Project3 from '../assets/medias/projects/euro.jpg'
 import Project4 from '../assets/medias/projects/flavorwave.jpg'
 import Project5 from '../assets/medias/projects/readify.jpg'
 import Project6 from '../assets/medias/projects/thinkverse.jpg'
+import Project7 from '../assets/medias/projects/reg-system.png';
 import { AnimatePresence, motion } from 'framer-motion'
 import AOS from 'aos'
 import 'aos/dist/aos.css';
@@ -84,6 +85,17 @@ const Projects = () => {
                repo: "https://github.com/vee309bajracharya/ThinkVerse-BlogApp",
 
                modalBg: "#b6552e",
+          },
+          {
+               id: 7,
+               image: Project7,
+               title: "Online Vital Registration System",
+               desc: "An online web application for Birth, Death and Migration Certificate Registration",
+               about: "A group based semester project for E-governance course, created with React JS and Laravel",
+               tech: ["TailwindCSS", "React JS", "Laravel"],
+               repo: "https://github.com/vee309bajracharya/Online-Vital-Registration-System",
+
+               modalBg: "#001845",
           }
      ]
 
@@ -100,13 +112,13 @@ const Projects = () => {
                     <title>Projects | Veerin Bajracharya</title>
 
                     <meta property="og:title" content='Projects | Veerin Bajracharya' />
-                    <meta property="og:url" content='https://my-portfolio-pi-two-17.vercel.app/projects' />
-                    <meta property="og:image" content="https://my-portfolio-pi-two-17.vercel.app/for-medias.png" />
+                    <meta property="og:url" content='https://veerin-bajracharya.vercel.app/projects' />
+                    <meta property="og:image" content="https://veerin-bajracharya.vercel.app/for-medias.png" />
                     <meta property="og:type" content="website" />
 
                     <meta name="twitter:title" content="Projects | Veerin Bajracharya" />
-                    <meta name="twitter:url" content="https://my-portfolio-pi-two-17.vercel.app/projects" />
-                    <meta name="twitter:image" content="https://my-portfolio-pi-two-17.vercel.app/for-medias.png" />
+                    <meta name="twitter:url" content="https://veerin-bajracharya.vercel.app/projects" />
+                    <meta name="twitter:image" content="https://veerin-bajracharya.vercel.app/for-medias.png" />
                     <meta name="twitter:card" content="summary_large_image" />
 
                </Helmet>
@@ -120,7 +132,7 @@ const Projects = () => {
                          {projects.map((project, id) => (
                               <div
                                    key={project.id}
-                                   className={`relative group rounded-lg overflow-hidden ${id === 0 ? "lg:col-span-3" : ""}`}
+                                   className={`relative group rounded-lg overflow-hidden ${id === 0 ? "lg:col-span-2" : ""}`}
                                    onClick={() => openModal(project)}>
 
                                    <img
