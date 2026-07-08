@@ -1,8 +1,8 @@
 ![logo-light](https://github.com/user-attachments/assets/970254f9-adfc-4d1c-a299-ea4a2f2b4898)
-# Veerin Bajracharya – Portfolio 💻
-This portfolio is more than just a demonstration of my work – It's a demonstration of who I am as a developer. From a tidy UI/UX to a smooth user experience, everything was crafted with proper detail.
+# Veerin Bajracharya – Portfolio
+This portfolio is more than just a demonstration of my work. It's a demonstration of who I am as a developer. From a tidy UI/UX to a smooth user experience, everything was crafted with proper detail.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 **Frontend**   
 
@@ -19,5 +19,5 @@ This portfolio is more than just a demonstration of my work – It's a demonstra
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
 
-## Portfolio Live 🚀
+## Portfolio Live
 [![Website](https://img.shields.io/badge/Website-Live-brightgreen?style=for-the-badge&logo=githubpages&logoColor=white)](https://veerin-bajracharya.vercel.app/)
