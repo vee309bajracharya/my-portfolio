@@ -31,7 +31,7 @@ const Navbar = () => {
 
 
     return (
-        <section className='z-30 relative bg-transparent backdrop-blur-md rounded-lg'>
+        <section className='z-30 relative bg-transparent'>
             <header>
                 <nav>
                     <div className='max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4'>

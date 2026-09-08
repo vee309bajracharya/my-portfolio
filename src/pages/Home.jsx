@@ -3,6 +3,7 @@ import IntroSection from '../components/IntroSection'
 import Navbar from '../components/Navbar'
 import PulseLoader from '../components/PulseLoader'
 import { Helmet } from 'react-helmet'
+import Footer from './Footer'
 
 const Home = () => {
   const [loading, setLoading] = useState(true);
@@ -17,7 +18,7 @@ const Home = () => {
   return (
     <main>
       <Helmet>
-        <title>Veerin Bajracharya</title>
+        <title>Home | Veerin Bajracharya</title>
 
         <meta property="og:title" content='Veerin Bajracharya' />
         <meta property="og:site_name" content='Veerin Bajracharya' />
@@ -33,6 +34,7 @@ const Home = () => {
       </Helmet>
       <Navbar />
       <IntroSection />
+      <Footer />
     </main>
   )
 }
